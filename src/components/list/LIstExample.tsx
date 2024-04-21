@@ -1,7 +1,7 @@
 import Badge from "../table/Badge";
 import List from "./List";
 
-// How to use list 3
+// How to use list 4
 function ListExample() {
   return (
     <div className="m-4 w-[20rem]">
