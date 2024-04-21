@@ -1,16 +1,21 @@
 import { colorType } from "../../common/color";
+import { twMerge } from "tailwind-merge";
 
-function Badge({
-  type = "allow",
-  children,
-}: {
+export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   type?: keyof typeof colorType;
   children: React.ReactNode;
-}) {
+}
+
+function Badge({ type = "allow", children, ...props }: BadgeProps) {
   const { backgroundColor, color } = colorType[type];
+
   return (
     <span
-      className={`rounded-xl p-2 text-white`}
+      {...props}
+      className={twMerge(
+        `inline-block rounded-xl p-2 text-white`,
+        props.className,
+      )}
       style={{
         backgroundColor,
         color,

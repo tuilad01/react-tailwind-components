@@ -3,23 +3,35 @@ import List from "./List";
 
 function ListExample() {
   return (
-    <div className="w-[20rem]">
+    <div className="m-4 w-[20rem]">
       <div>
         <h1>List 1</h1>
-        <List items={[1, 2, 3, 4]} />
+        <List
+          items={[
+            "Occaecat aliquip consequat.",
+            "Enim ullamco et magna irur.",
+            "Tempor elit non elit paria.",
+            "Ut dolor nulla dolor occae.",
+          ]}
+        />
       </div>
       <div className="mt-4">
         <h1>List 2</h1>
         <List
           items={[
-            <p>
-              Task 1 <Badge>Completed</Badge>
+            <div className="flex items-center">
+              <p className="truncate">Occaecat aliquip consequat</p>
+              <Badge>Completed</Badge>
+            </div>,
+            <p className="truncate">
+              Enim ullamco et magna irur
+              <Badge type="forbidden">In process</Badge>
             </p>,
-            <p>
-              Task 2 <Badge type="forbidden">In process</Badge>
+            <p className="truncate">
+              Tempor elit non elit paria <Badge type="warning">Open</Badge>
             </p>,
-            <p>
-              Task 3 <Badge type="warning">Open</Badge>
+            <p className="truncate">
+              Ut dolor nulla dolor occae <Badge type="warning">Open</Badge>
             </p>,
           ]}
         />
