@@ -11,7 +11,8 @@ export interface TableProps {
 
 function Table({ columns, data }: TableProps) {
   return (
-    <table className="w-500px overflow-auto shadow-md">
+    <div className="w-full overflow-auto">
+      <table className="w-full shadow-md">
       <thead>
         <tr className="shadow-lg">
           <Cell isHeader={true}>#</Cell>
@@ -33,6 +34,8 @@ function Table({ columns, data }: TableProps) {
         ))}
       </tbody>
     </table>
+    </div>
+    
   );
 }
 

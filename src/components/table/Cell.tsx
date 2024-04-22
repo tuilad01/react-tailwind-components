@@ -6,10 +6,10 @@ function Cell({
   children: React.ReactNode;
 }) {
   if (isHeader) {
-    return <th className="p-4 bold">{children}</th>;
+    return <th className="p-4 bold min-w-48 truncated break-words">{children}</th>;
   }
 
-  return <td className="p-4">{children}</td>;
+  return <td className="p-4 break-all min-w-48">{children}</td>;
 }
 
 export default Cell;
